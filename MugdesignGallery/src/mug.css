@@ -1,0 +1,863 @@
+/*====================================================================
+  -  Project: Themed Website CSS
+  -  Author: Your Name
+  -  Date: September 5, 2025
+  -  Description: A complete, consistent CSS file for a multi-section website.
+  -  Colors:
+  -    Primary (Teal/Green): #006a71, #2d7b82
+  -    Secondary (Light): #b1d5cd, #c4dbce, #f2efe7
+  -    Text: #333, #444, #666
+======================================================================*/
+
+/* ----------------------------------------------------------------------
+ * 1. Core & General Styles
+ * ---------------------------------------------------------------------- */
+
+ 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: linear-gradient(to left bottom, #f2efe7, #e6e8db, #d6e2d3, #c4dbce, #b1d5cd, #9ec9c5, #8cbebd, #7ab2b7, #629fa5, #498d93, #2d7b82, #006a71);
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* Container for consistent padding and max-width */
+.mug-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ----------------------------------------------------------------------
+ * 2. Navigation (Navbar)
+ * ---------------------------------------------------------------------- */
+.navbar {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #164644; /* Dark green for brand */
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05) rotate(-2deg);
+  color: #e56b07; /* A unique accent color on hover */
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+  color: #374151;
+  font-weight: 1000;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #2d7b82, #4ad3c5);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2d7b82;
+  transform: translateY(-2px);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  transform: scale(1.1);
+}
+
+.navbar-collapse.show {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px) saturate(180%);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+}
+
+/* ----------------------------------------------------------------------
+ * 3. Hero Section
+ * ---------------------------------------------------------------------- */
+.magic-hero,
+.mug-hero-section {
+  text-align: center;
+  padding: 5rem 1rem;
+  background-color: #f7f7f7;background-image: linear-gradient(to left bottom, #f2efe7, #e6e8db, #d6e2d3, #c4dbce, #b1d5cd, #9ec9c5, #8cbebd, #7ab2b7, #629fa5, #498d93, #2d7b82, #006a71);
+}
+
+.magic-hero-title,
+.mug-hero-title {
+  font-size: 5rem; /* Adjusted for consistency */
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.magic-hero-title span {
+  color: #006a71;
+}
+
+.magic-hero-subtitle,
+.mug-hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #6c757d;
+}
+
+#hero-mug-image {
+  width: 300px;
+  height: 300px;
+  rotate: 20deg;
+}
+
+#hero1-mug-image {
+  width: 250px;
+  height: 250px;
+  rotate: -30deg;
+  transform: scaleX(-1);
+}
+
+/* ----------------------------------------------------------------------
+ * 4. Buttons
+ * ---------------------------------------------------------------------- */
+.magic-btn-primary,
+.magic-btn-secondary {
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.magic-btn-primary {
+  background-color: #2d7b82;
+  color: #fff;
+}
+
+.magic-btn-primary:hover {
+  background-color: #006a71;
+}
+
+.magic-btn-secondary {
+  background-color: transparent;
+  border: 2px solid #2d7b82;
+  color: #2d7b82;
+}
+
+.magic-btn-secondary:hover {
+  background-color: #2d7b82;
+  color: #fff;
+}
+
+/* ----------------------------------------------------------------------
+ * 5. Features Section
+ * ---------------------------------------------------------------------- */
+.magic-features {
+  background: #f2efe7;
+  padding: 4rem 1rem;
+}
+
+.magic-features-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.magic-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.magic-feature-card {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.magic-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.magic-feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: #c4dbce;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.magic-feature-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.magic-feature-description {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* ----------------------------------------------------------------------
+ * 6. Gallery Section (magic- and mg- classes)
+ * ---------------------------------------------------------------------- */
+.magic-gallery {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.magic-gallery-title, .mg-title {
+  font-size: 2.75rem;
+  margin-bottom: 2rem;
+  color: #2d7b82;
+  font-weight: 700;
+}
+
+.mg-page {
+  background-color: #f8f9fa;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.mg-subtitle {
+  color: #6c757d;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.magic-gallery-grid, .mg-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.magic-gallery-card, .mg-card {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem; /* Increased padding for better spacing */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.magic-gallery-card:hover, .mg-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.magic-gallery-image, .mg-card-img {
+  aspect-ratio: 4 / 3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem; /* Adjusted margin */
+  position: relative;
+  background-color: #f0f0f0;
+}
+
+.magic-gallery-image img, .mg-img-hover {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  transition: transform 0.4s ease;
+}
+
+.magic-gallery-image img:hover, .mg-card-img:hover .mg-img-hover {
+  transform: scale(1.07);
+}
+
+.mg-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+}
+
+.mg-card-img:hover .mg-card-overlay {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.mg-button-container {
+  margin-top: auto; /* Pushes the button to the bottom */
+}
+
+.magic-gallery-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.magic-gallery-btn {
+  padding: 0.45rem .50rem;
+  font-size: .85rem;
+  font-weight: 500;
+  border-radius: 1.2rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.magic-gallery-btn.view-image {
+  background-color: #2d7b82;
+  color: #fff;
+}
+
+.magic-gallery-btn.view-image:hover {
+  background-color: #1e5a60;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.magic-gallery-btn.copy-link {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.magic-gallery-btn.copy-link:hover {
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+/* Gallery design btn */
+.mg-btn-copy {
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.mg-btn-copy:hover {
+  background-color: #ffc107d1;
+  transform: scale(1.02);
+}
+
+.btn-outline-primary {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+  border-color: #0d6efd;
+}
+
+.mg-search-input {
+  border-radius: 0.5rem;
+  border: 2px solid #0d6efd;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+}
+
+.mg-search-input::placeholder {
+  color: #adb5bd;
+}
+
+/* ----------------------------------------------------------------------
+ * 7. Contact Page Sections (mug- classes) - Advanced
+ * ---------------------------------------------------------------------- */
+
+.mug-contact-content {
+  padding: 6rem 1.5rem; /* Increased padding for more breathing room */
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.mug-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .mug-contact-grid {
+    grid-template-columns: 1fr;
+    /* On larger screens, this grid can be adapted for a two-column layout
+       if you decide to add a form back in the future.
+       e.g., grid-template-columns: 1fr 1.5fr; */
+  }
+}
+
+/* ----------------------------------------------------------------------
+ * Contact Information Card
+ * ---------------------------------------------------------------------- */
+.mug-contact-info {
+  background: #f8f9fa;
+  border-radius: 20px; /* More rounded corners for a softer feel */
+  padding: 3rem; /* Increased padding */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Deeper, softer shadow */
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smoother animation */
+}
+
+.mug-contact-info:hover {
+  transform: translateY(-8px); /* Subtle lift on hover */
+}
+
+.mug-contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #006a71; /* A thematic color line for emphasis */
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.mug-contact-item {
+  display: flex;
+  align-items: center; /* Aligned vertically in the center */
+  margin-bottom: 2rem;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.mug-contact-item:hover {
+  transform: translateX(10px); /* Move item slightly on hover for an interactive feel */
+}
+
+.mug-contact-icon {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e3f2fd; /* Light blue background for icons */
+  color: #0d6efd; /* Blue icon color */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.mug-contact-item:hover .mug-contact-icon {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
+
+.mug-contact-item h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.mug-contact-item p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------------------------------
+ * Social Links
+ * ---------------------------------------------------------------------- */
+.mug-social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.mug-social-link {
+  color: #007bff;
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 1.25rem; /* Larger icons */
+}
+
+.mug-social-link:hover {
+  color: #0056b3;
+  transform: translateY(-5px) scale(1.2); /* Lift and enlarge on hover */
+}
+
+.social-icon {
+  width: 2rem; /* Adjusted size for better visual weight */
+  height: 2rem;
+  transition: all 0.3s ease;
+}
+/* FAQ Section */
+.mug-faq-section {
+  padding: 4rem 0;
+  background-color: #f7f7f7;
+}
+
+.mug-faq-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mug-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .mug-faq-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.mug-faq-item {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.mug-faq-item h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.mug-faq-item p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #666;
+}
+
+/* ----------------------------------------------------------------------
+ * 8. Vue Modal & Toast
+ * ---------------------------------------------------------------------- */
+/* Toast Notification */
+.mg-toast {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  min-width: 260px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  border-radius: 0.5rem;
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border: 1px solid #badbcc;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+  0%,
+  85% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  10%,
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Vue Modal Styling */
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+}
+
+.modal-content-vue {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+/* ----------------------------------------------------------------------
+ * 9. Footer Section
+ * ---------------------------------------------------------------------- */
+.magic-footer {
+  background: linear-gradient(135deg, #2d7b82, #006a71);
+  color: #fff;
+  padding: 3rem 2rem;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.magic-footer-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .magic-footer-container {
+    grid-template-columns: 2fr 1fr;
+    align-items: start;
+  }
+}
+
+.magic-footer-left h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.magic-footer-left p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #e0f7f7;
+}
+
+.magic-footer-left p a {
+  color: #ffffffcc;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.magic-footer-left p a:hover {
+  color: #fff;
+}
+
+.magic-footer-right h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #ffffffdd;
+}
+
+.magic-footer .social-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.magic-footer a {
+  color: #ffffffcc;
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
+}
+
+.magic-footer a:hover {
+  color: #2de6cf;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.magic-footer .copyright {
+  font-size: 0.875rem;
+  opacity: 0.7;
+  margin-top: 3rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+.magic-footer::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  filter: blur(50px);
+}
+
+.magic-footer::after {
+  content: '';
+  position: absolute;
+  bottom: -60px;
+  right: -60px;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  filter: blur(70px);
+}
+
+
+/* =================================== */
+/* Section Titles */
+/* =================================== */
+.section-title {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 9999px;
+}
+
+/* =================================== */
+/* Story Section */
+/* =================================== */
+.image-placeholder {
+  position: relative;
+  background-color: #f3f4f6;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 3px; /* Controls the thickness of the border */
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) border-box;
+  mask: 
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* =================================== */
+/* Values Section Cards */
+/* =================================== */
+.value-card {
+  position: relative;
+  padding: 2.5rem 2rem;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
+}
+
+.value-title {
+  color: var(--text-color);
+}
+
+.value-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 0.75rem auto 0;
+  border-radius: 9999px;
+}

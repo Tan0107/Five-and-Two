@@ -1,0 +1,334 @@
+/* ==========================================================================
+ * 1. THEME & UTILITIES
+ * ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+:root {
+  --color-primary: #1C2B3A;
+  --color-accent: #E5734A;
+  --color-text-dark: #334155;
+  --color-text-light: #64748B;
+  --color-background-light: #F8FAFC;
+  --color-background-white: #FFFFFF;
+}
+
+
+
+/* ==========================================================================
+ * 2. BASE STYLES
+ * ========================================================================== */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  background-color: var(--color-background-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--color-text-dark);
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+ * 3. HERO SECTION
+ * ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  overflow: hidden;
+  color: var(--color-background-white);
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.hero-title {
+  font-size: clamp(2.75rem, 6vw, 4.25rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-shadow: 0 4px 8px rgba(161, 140, 140, 0.2);
+  color: #e7741c;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3.5vw, 1.75rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 40rem;
+  margin-inline: auto;
+  line-height: 1.65;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* ==========================================================================
+ * 4. STORY SECTION
+ * ========================================================================== */
+
+.story-section {
+  padding-block: 6rem;
+  padding-inline: 1.5rem;
+  background-color: var(--color-background-white);
+  position: relative;
+  z-index: 1;
+}
+
+.story-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--color-text-dark);
+  line-height: 1.3;
+  text-align: left;
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.story-paragraph {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: var(--color-text-light);
+  margin-bottom: 1.75rem;
+  line-height: 1.75;
+  max-width: 48rem;
+  text-align: left;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(2rem);
+}
+
+.story-paragraph:nth-of-type(2) {
+  animation-delay: 0.4s;
+}
+
+/* ==========================================================================
+ * 5. VALUES SECTION
+ * ========================================================================== */
+
+.values-section {
+  padding-block: 5rem;
+  padding-inline: 1.5rem;
+  background-color: var(--color-background-light);
+}
+
+.values-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 4rem;
+  color: var(--color-text-dark);
+  text-align: center;
+}
+
+.values-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 72rem;
+  margin-inline: auto;
+}
+
+/* ==========================================================================
+ * 6. VALUE CARD COMPONENT
+ * ========================================================================== */
+
+.c-value-card {
+  background-color: var(--color-background-white);
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #E2E8F0;
+  opacity: 0;
+  transform: translateY(2rem);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.c-value-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.c-value-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.c-value-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.c-value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.c-value-card__icon {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-accent);
+  color: var(--color-background-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+  animation: float 3s ease-in-out infinite, pulseGlow 2.5s ease-in-out infinite;
+}
+
+.c-value-card__title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text-dark);
+  z-index: 1;
+  position: relative;
+  text-align: left;
+}
+
+.c-value-card__description {
+  font-size: 1.0625rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  z-index: 1;
+  position: relative;
+  text-align: left;
+  max-width: none;
+}
+
+/* ==========================================================================
+ * 7. ANIMATIONS
+ * ========================================================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(229, 115, 74, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* ==========================================================================
+ * 8. RESPONSIVE DESIGN
+ * ========================================================================== */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+    padding-inline: 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding-inline: 1rem;
+  }
+
+  .story-section {
+    padding-block: 4rem;
+    padding-inline: 1rem;
+  }
+
+  .values-section {
+    padding-block: 4rem;
+    padding-inline: 1rem;
+  }
+
+  .values-title {
+    font-size: clamp(1.75rem, 5vw, 2rem);
+    margin-bottom: 2rem;
+  }
+
+  .c-value-card {
+    padding: 2rem;
+  }
+
+  .c-value-card__title {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .c-value-card__description {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .c-value-card__icon {
+    margin-bottom: 1rem;
+  }
+}
