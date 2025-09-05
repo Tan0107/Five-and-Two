@@ -127,8 +127,8 @@ const designs = ref([
   { id: 9, title: 'Philippians 2:10-11', category: 'Faith', image: bible6 },
   { id: 11, title: 'Luffy Face 2', category: 'Anime', image: luffy1 },
   { id: 12, title: 'Luffy Natural 3', category: 'Anime', image: luffy2 },
-  { id: 13, title: 'Luffy Gear 2', category: 'Anime', image: luffy3 },
-  { id: 14, title: 'Luffy Gear 5', category: 'Anime', image: luffy4 },
+  { id: 13, title: 'Luffy Gear 5', category: 'Anime', image: luffy3 },
+  { id: 14, title: 'Luffy Gear 2', category: 'Anime', image: luffy4 },
   { id: 15, title: 'Zoro', category: 'Anime', image: zoro1 }
 ])
 
