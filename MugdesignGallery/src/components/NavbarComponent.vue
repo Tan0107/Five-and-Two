@@ -31,7 +31,7 @@
             <router-link
               :to="item.to"
               class="nav-link"
-              :class="{ active: isActive(item.to) }"
+              
               @click="closeMobileMenu"
             >
               {{ item.name }}
