@@ -54,7 +54,9 @@ const navItems = [
   { name: 'Home', to: '/' },
   { name: 'About Us', to: '/about' },
   { name: 'Gallery', to: '/gallery' },
-  { name: 'Contact Us', to: '/contact' }
+  { name: 'Contact Us', to: '/contact' },
+  
+  
 ]
 
 const isActive = (path) => route.path.startsWith(path)

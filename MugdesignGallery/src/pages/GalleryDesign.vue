@@ -106,6 +106,49 @@ import luffy2 from '../assets/luffy2.png'
 import luffy3 from '../assets/luffy3.png'
 import luffy4 from '../assets/luffy4.png'
 import zoro1 from '../assets/zoro1.png'
+import kakashi from '../assets/kakashi.png'
+import naruto1 from '../assets/naruto1.png'
+import naruto2 from '../assets/naruto2.png'
+import naruto from '../assets/naruto.png'
+import panda from '../assets/panda.png'
+import panda1 from '../assets/panda1.png'
+import panda2 from '../assets/panda2.png'
+import minions from '../assets/minions.png'
+import teachers1 from '../assets/teachers1.png'
+import teachers2 from '../assets/teachers2.png'
+import teachers3 from '../assets/teachers3.png'
+import teachers4 from '../assets/teachers4.png'
+import joyLord from '../assets/joyLord.png'
+import flower1 from '../assets/flower1.png'
+import flower2 from '../assets/flower2.png'
+import flower3 from '../assets/flower3.png'
+import flower4 from '../assets/flower4.png'
+import silhouette1 from '../assets/silhouette1.png'
+import silhouette2 from '../assets/silhouette2.png'
+import silhouette3 from '../assets/silhouette3.png'
+import silhouette4 from '../assets/silhouette4.png'
+import silhouette5 from '../assets/silhouette5.png'
+import weddingcar1 from '../assets/weddingcar1.png'
+import weddingcar2 from '../assets/weddingcar2.png'
+import weddingcar3 from '../assets/weddingcar3.png'
+import weddingcar4 from '../assets/weddingcar4.png'
+import weddingcar5 from '../assets/weddingcar5.png'
+import weddingcar6 from '../assets/weddingcar6.png'
+import weddingcar7 from '../assets/weddingcar7.png'
+import weddingcar8 from '../assets/weddingcar8.png'
+import cat1 from '../assets/cat1.png'
+import cat2 from '../assets/cat2.png'
+import cat3 from '../assets/cat3.png'
+import cat4 from '../assets/cat4.png'
+import cat5 from '../assets/cat5.png'
+import cat6 from '../assets/cat6.png'
+import cat7 from '../assets/cat7.png'
+import cat8 from '../assets/cat8.png'
+import cat9 from '../assets/cat9.png'
+
+
+
+
 
 // Reactive State
 const showToast = ref(false)
@@ -129,7 +172,50 @@ const designs = ref([
   { id: 12, title: 'Luffy Natural 3', category: 'Anime', image: luffy2 },
   { id: 13, title: 'Luffy Gear 5', category: 'Anime', image: luffy3 },
   { id: 14, title: 'Luffy Gear 2', category: 'Anime', image: luffy4 },
-  { id: 15, title: 'Zoro', category: 'Anime', image: zoro1 }
+  { id: 15, title: 'Zoro', category: 'Anime', image: zoro1 },
+  { id: 16, title: 'Kakashi', category: 'Anime', image: kakashi },
+  { id: 17, title: 'Naruto 1', category: 'Anime', image: naruto1 },
+  { id: 18, title: 'Naruto 2', category: 'Anime', image: naruto2 },
+  { id: 19, title: 'Naruto', category: 'Anime', image: naruto },
+  { id: 20, title: 'Panda', category: 'Animals', image: panda },
+  { id: 21, title: 'Panda 1', category: 'Animals', image: panda1 },
+  { id: 22, title: 'Panda 2', category: 'Animals', image: panda2 },
+  { id: 23, title: 'Minions', category: 'Characters', image: minions },
+  { id: 24, title: 'Teachers Day', category: 'Education', image: teachers1 },
+  { id: 25, title: 'Teachers Day 2', category: 'Education', image: teachers2 },
+  { id: 26, title: 'Teachers Day 3', category: 'Education', image: teachers3 },
+  { id: 27, title: 'Teachers Day 4', category: 'Education', image: teachers4 },
+  { id: 28, title: 'The Joy of the Lord', category: 'Faith', image: joyLord },
+  { id: 29, title: 'Flower 1', category: 'Nature', image: flower1 },
+  { id: 30, title: 'Flower 2', category: 'Nature', image: flower2 },
+  { id: 31, title: 'Flower 3', category: 'Nature', image: flower3 },
+  { id: 32, title: 'Flower 4', category: 'Nature', image: flower4 },
+  { id: 33, title: 'Silhouette 1', category: 'Silhouette', image: silhouette1 },
+  { id: 34, title: 'Silhouette 2', category: 'Silhouette', image: silhouette2 },
+  { id: 35, title: 'Silhouette 3', category: 'Silhouette', image: silhouette3 },
+  { id: 36, title: 'Silhouette 4', category: 'Silhouette', image: silhouette4 },
+  { id: 37, title: 'Silhouette 5', category: 'Silhouette', image: silhouette5 },
+  { id: 38, title: 'Wedding Car 1', category: 'Wedding', image: weddingcar1 },
+  { id: 39, title: 'Wedding Car 2', category: 'Wedding', image: weddingcar2 },
+  { id: 40, title: 'Wedding Car 3', category: 'Wedding', image: weddingcar3 },
+  { id: 41, title: 'Wedding Car 4', category: 'Wedding', image: weddingcar4 },
+  { id: 42, title: 'Wedding Car 5', category: 'Wedding', image: weddingcar5 },
+  { id: 43, title: 'Wedding Car 6', category: 'Wedding', image: weddingcar6 },
+  { id: 44, title: 'Wedding Car 7', category: 'Wedding', image: weddingcar7 },
+  { id: 45, title: 'Wedding Car 8', category: 'Wedding', image: weddingcar8 },
+  { id: 46, title: 'Cat 1', category: 'Animals', image: cat1 },
+  { id: 47, title: 'Cat 2', category: 'Animals', image: cat2 },
+  { id: 48, title: 'Cat 3', category: 'Animals', image: cat3 },
+  { id: 49, title: 'Cat 4', category: 'Animals', image: cat4 },
+  { id: 50, title: 'Cat 5', category: 'Animals', image: cat5 },
+  { id: 51, title: 'Cat 6', category: 'Animals', image: cat6 },
+  { id: 52, title: 'Cat 7', category: 'Animals', image: cat7 },
+  { id: 53, title: 'Cat 8', category: 'Animals', image: cat8 },
+  { id: 54, title: 'Cat 9', category: 'Animals', image: cat9 }
+
+  
+
+
 ])
 
 // Filtered Designs
